@@ -1,0 +1,32 @@
+{
+  "name": "authentication-microservice",
+  "version": "1.0.0",
+  "description": "This repository contains all the functionalities to perform user authentication on dashboard and manage the authorization with smart card on each dumpster",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "linter": "npx eslint src/*/*.js test/*.js src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartWasteCollection/authentication-microservice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmartWasteCollection/authentication-microservice/issues"
+  },
+  "homepage": "https://github.com/SmartWasteCollection/authentication-microservice#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "eslint": "^8.22.0",
+    "husky": "^8.0.1"
+  }
+}
