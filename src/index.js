@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const { createServer } = require('http');
+const authenticationController = require('./controllers/authenticationController');
+
 
 require('dotenv').config();
 
@@ -15,9 +17,13 @@ app.use(cors());
 app.use(express.json());
 app.use('/static', express.static(__dirname + '/public'));
 
+const routes = require('./routes/authenticationRoutes');
+routes(app, authenticationController);
+
+
 mongoose.connect(process.env.URI_MONGO_DB,
     { useNewUrlParser: true, useUnifiedTopology: true },
-    (e) => e == null ? console.log('Connected to mongoDB') : console.log('ERROR on connection: ' + e));
+    (e) => e == null ? console.log('Connected to mongoDB database') : console.log('ERROR on connection: ' + e));
 
 
 app.get('/', (req, res) => {
