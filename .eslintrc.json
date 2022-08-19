@@ -27,6 +27,7 @@
             "error",
             "always"
         ],
+        "no-undef": "off",
         "keyword-spacing": "error",
         "space-before-function-paren": ["error", "never"],
         "object-curly-spacing": ["error", "always"],
