@@ -56,3 +56,19 @@ exports.getAllUsers = (req, res) => {
         }
     });
 };
+
+exports.updateUser = (req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body, { new:true }, (err, user) => {
+        if (err) {
+            res.status(401).json({
+                message: 'User not successful updated',
+                error: err
+            });
+        } else {
+            res.status(200).json({
+                message: 'User successfully updated',
+                user,
+            });
+        }
+    });
+};
