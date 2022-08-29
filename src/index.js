@@ -21,7 +21,7 @@ const routes = require('./routes/authenticationRoutes');
 routes(app, authenticationController);
 
 
-mongoose.connect(process.env.LOCAL_MONGO_DB,
+mongoose.connect(process.env.URI_MONGO_DB,
     { useNewUrlParser: true, useUnifiedTopology: true },
     (e) => e == null ? console.log('Connected to mongoDB database') : console.log('ERROR on connection: ' + e));
 
