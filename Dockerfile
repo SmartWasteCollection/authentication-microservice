@@ -11,6 +11,6 @@ RUN chown -R node:node ./node_modules
 # Bundle app source
 COPY . ./
 
-EXPOSE 3000
+EXPOSE 3002
 
 CMD [ "node", "./src/index.js" ]
